@@ -1,6 +1,6 @@
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Root CDS entity for travel request'
-@Metadata.ignorePropagatedAnnotations: true
+@Metadata.ignorePropagatedAnnotations: false
 @VDM.viewType: #COMPOSITE
 define root view entity ZRAP_MD_TRAVEL_ROOT as select from /dmo/travel_m
 composition [0..*] of ZRAP_MD_TRAVEL_BOOKING as _Booking
