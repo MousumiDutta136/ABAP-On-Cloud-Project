@@ -2,6 +2,7 @@
 @EndUserText.label: 'Root CDS entity for travel request'
 @Metadata.ignorePropagatedAnnotations: false
 @VDM.viewType: #COMPOSITE
+@Metadata.allowExtensions: true
 define root view entity ZRAP_MD_TRAVEL_ROOT as select from /dmo/travel_m
 composition [0..*] of ZRAP_MD_TRAVEL_BOOKING as _Booking
 association of one to one /DMO/I_Agency as _Agency
@@ -13,8 +14,9 @@ on $projection.CurrencyCode = _Currency.Currency
 association of one to one /DMO/I_Overall_Status_VH as _OverallStatus
 on $projection.OverallStatus = _OverallStatus.OverallStatus
 {
-      @ObjectModel.text.element: [ 'Description' ]
+    @ObjectModel.text.element: [ 'Description' ]
     key travel_id as TravelId,
+    @ObjectModel.text.element: [ 'AgencyName' ]
     agency_id as AgencyId,
     _Agency.Name as AgencyName,
     @ObjectModel.text.element: [ 'CustomerName' ]

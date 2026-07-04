@@ -1,6 +1,6 @@
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Projection for root trael entity'
-@Metadata.ignorePropagatedAnnotations: true
+@Metadata.ignorePropagatedAnnotations: false
 @VDM.viewType: #CONSUMPTION
 @Metadata.allowExtensions: true
 define root view entity ZRAP_MD_TRAVEL_PROCESSOR as projection on ZRAP_MD_TRAVEL_ROOT
