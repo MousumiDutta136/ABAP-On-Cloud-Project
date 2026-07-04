@@ -24,6 +24,7 @@ define root view entity ZRAP_MD_TRAVEL_PROCESSOR as projection on ZRAP_MD_TRAVEL
     AgencyName,
     CustomerName,
     StatusText,
+    Minion,
     /* Associations */
     _Agency,
     _Booking : redirected to composition child ZRAP_MD_BOOKING_PROCESSOR,

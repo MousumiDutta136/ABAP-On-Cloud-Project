@@ -32,6 +32,12 @@ on $projection.OverallStatus = _OverallStatus.OverallStatus
     description as Description,
      @ObjectModel.text.element: [ 'StatusText' ]
     overall_status as OverallStatus,
+    case overall_status
+     when 'O' then 2
+     when 'A' then 3
+     when 'R' then 1
+     else 1    
+    end as Minion,
     _OverallStatus._Text[Language=$session.system_language].Text as StatusText,
     @Semantics.user.createdBy: true
     created_by as CreatedBy,

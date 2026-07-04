@@ -21,7 +21,7 @@ annotate entity ZRAP_MD_TRAVEL_PROCESSOR
 //    CurrencyCode;
 //    Description;
     @UI.selectionField: [{position: 50  }]
-    @UI.lineItem: [{ position: 60 }]
+    @UI.lineItem: [{ position: 60, importance: #HIGH, criticality: 'Minion'}]
     OverallStatus;
 //    CreatedBy;
 //    CreatedAt;
