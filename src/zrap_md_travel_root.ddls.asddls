@@ -17,9 +17,21 @@ on $projection.OverallStatus = _OverallStatus.OverallStatus
     @ObjectModel.text.element: [ 'Description' ]
     key travel_id as TravelId,
     @ObjectModel.text.element: [ 'AgencyName' ]
+    @Consumption.valueHelpDefinition: [{ 
+    entity: {
+    name: '/DMO/I_Agency',
+    element: 'AgencyID'
+    }    
+     }]
     agency_id as AgencyId,
     _Agency.Name as AgencyName,
     @ObjectModel.text.element: [ 'CustomerName' ]
+    @Consumption.valueHelpDefinition: [{ 
+    entity: {
+    name: '/DMO/I_Customer',
+    element: 'CustomerID'
+    }    
+     }]
     customer_id as CustomerId,
     concat_with_space(_Customer.FirstName, _Customer.LastName, 1) as CustomerName,
     begin_date as BeginDate,
@@ -31,6 +43,12 @@ on $projection.OverallStatus = _OverallStatus.OverallStatus
     currency_code as CurrencyCode,
     description as Description,
      @ObjectModel.text.element: [ 'StatusText' ]
+     @Consumption.valueHelpDefinition: [{ 
+    entity: {
+    name: '/DMO/I_Overall_Status_VH',
+    element: 'CustomerID'
+    }    
+     }]
     overall_status as OverallStatus,
     case overall_status
      when 'O' then 2
