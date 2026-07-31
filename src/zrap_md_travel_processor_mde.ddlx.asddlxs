@@ -1,4 +1,10 @@
 @Metadata.layer: #CUSTOMER
+@UI.headerInfo:{
+typeName: 'Travel Request',
+typeNamePlural: 'Travel Requests',
+title:{value:'TravelId'},
+description:{value: 'Description'}
+}
 annotate entity ZRAP_MD_TRAVEL_PROCESSOR
     with 
 {
